@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Rancang Bangun Data Logger Suhu dan Kecepatan Arus Laut</title>
+
+<style>
+
+body{
+font-family:"Times New Roman", serif;
+background:#f2f4f7;
+margin:0;
+padding:0;
+line-height:1.7;
+}
+
+.container{
+width:900px;
+margin:auto;
+background:white;
+padding:40px;
+box-shadow:0px 0px 12px rgba(0,0,0,0.15);
+}
+
+h1{
+text-align:center;
+font-size:28px;
+}
+
+.penulis{
+text-align:center;
+margin-bottom:30px;
+}
+
+h2{
+border-left:5px solid #2c7be5;
+padding-left:10px;
+margin-top:35px;
+}
+
+p{
+text-align:justify;
+}
+
+figure{
+text-align:center;
+margin:30px 0;
+}
+
+figure img{
+width:100%;
+max-width:700px;
+}
+
+figcaption{
+font-style:italic;
+margin-top:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th{
+background:#2c7be5;
+color:white;
+padding:10px;
+border:1px solid #ddd;
+}
+
+table td{
+padding:8px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+table tr:nth-child(even){
+background:#f2f2f2;
+}
+
+a{
+color:#2c7be5;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Rancang Bangun Data Logger Suhu dan Kecepatan Arus Laut untuk Praktikum Oseanografi</h1>
+
+<div class="penulis">
+ <br>
+Franki Indra Saputra (08051382328074) <br>
+Program Studi Ilmu Kelautan
+</div>
+
+<h2>Abstrak</h2>
+
+<p>
+Pengukuran parameter oseanografi seperti suhu air laut dan kecepatan arus laut merupakan kegiatan penting dalam praktikum oseanografi. Namun, keterbatasan alat pengukuran yang mampu merekam data secara otomatis sering menjadi kendala dalam kegiatan praktikum di laboratorium pendidikan. Penelitian ini bertujuan untuk merancang dan mengembangkan alat data logger yang mampu merekam data suhu dan kecepatan arus laut secara otomatis menggunakan sistem berbasis mikrokontroler.
+</p>
+
+<p>
+Metode penelitian yang digunakan meliputi tahap perancangan perangkat keras, pembuatan perangkat lunak, serta pengujian alat. Sistem yang dikembangkan menggunakan sensor suhu, sensor arus laut, serta mikrokontroler sebagai pengolah data. Data yang diperoleh kemudian disimpan dalam media penyimpanan digital sehingga dapat dianalisis lebih lanjut.
+</p>
+
+<p>
+Hasil penelitian menunjukkan bahwa alat data logger yang dirancang mampu merekam data suhu dan kecepatan arus laut secara otomatis dengan tingkat akurasi yang cukup baik. Alat ini dapat digunakan sebagai alat praktikum oseanografi untuk membantu mahasiswa dalam memahami dinamika perairan laut.
+</p>
+
+<p><b>Kata Kunci:</b> Data Logger, Suhu Laut, Arus Laut, Oseanografi</p>
+
+
+<h2>Pendahuluan</h2>
+
+<p>
+Oseanografi merupakan ilmu yang mempelajari berbagai fenomena yang terjadi di lautan, termasuk dinamika arus laut, suhu air laut, serta interaksi antara laut dan atmosfer. Parameter oseanografi seperti suhu dan arus laut memiliki peranan penting dalam memahami proses fisika yang terjadi di perairan laut. Oleh karena itu, pengukuran parameter tersebut menjadi bagian penting dalam kegiatan praktikum oseanografi di lingkungan pendidikan.
+</p>
+
+<p>
+Dalam kegiatan praktikum, pengukuran suhu dan arus laut biasanya dilakukan menggunakan alat ukur manual seperti termometer dan current meter. Namun, penggunaan alat manual seringkali membutuhkan proses pencatatan data secara langsung oleh pengamat. Metode ini memiliki beberapa keterbatasan seperti kemungkinan terjadinya kesalahan pencatatan data serta keterbatasan dalam melakukan pengukuran secara kontinu dalam jangka waktu yang lama.
+</p>
+
+<p>
+Seiring dengan perkembangan teknologi, sistem pengukuran berbasis mikrokontroler mulai banyak digunakan untuk menggantikan sistem pengukuran manual. Salah satu teknologi yang dapat dikembangkan adalah data logger yang mampu merekam data lingkungan secara otomatis dalam interval waktu tertentu. Dengan menggunakan data logger, proses pengukuran menjadi lebih efisien dan data yang diperoleh dapat direkam secara kontinu.
+</p>
+
+
+<h2>Tujuan Penelitian</h2>
+
+<p>
+Penelitian ini bertujuan untuk merancang dan mengembangkan sebuah alat data logger yang mampu mengukur suhu air laut dan kecepatan arus laut secara otomatis. Selain itu, penelitian ini juga bertujuan untuk menguji kinerja alat yang dikembangkan sehingga dapat digunakan sebagai alat praktikum oseanografi di laboratorium pendidikan.
+</p>
+
+
+<h2>Metode Penelitian</h2>
+
+<p>
+Metode penelitian yang digunakan dalam penelitian ini meliputi beberapa tahapan utama yaitu tahap perancangan alat, pembuatan sistem, serta pengujian kinerja alat. Pada tahap perancangan dilakukan desain sistem perangkat keras yang terdiri dari mikrokontroler, sensor suhu, sensor arus laut, serta modul penyimpanan data.
+</p>
+
+<p>
+Perangkat lunak yang digunakan dalam sistem ini dikembangkan menggunakan bahasa pemrograman Arduino. Program tersebut berfungsi untuk membaca data dari sensor, memproses data yang diperoleh, serta menyimpan data hasil pengukuran ke dalam media penyimpanan digital.
+</p>
+
+<figure>
+<img src="alat_datalogger.png">
+<figcaption>Gambar 1. Sistem Data Logger Suhu dan Arus Laut</figcaption>
+</figure>
+
+
+<h2>Hasil dan Pembahasan</h2>
+
+<p>
+Hasil pengujian menunjukkan bahwa alat data logger yang dikembangkan mampu merekam data suhu dan kecepatan arus laut secara otomatis. Data yang diperoleh dari sensor kemudian disimpan dalam media penyimpanan sehingga dapat dianalisis lebih lanjut.
+</p>
+
+<h3>Tabel 1. Hasil Pengukuran Suhu Air Laut</h3>
+
+<table>
+
+<tr>
+<th>No</th>
+<th>Waktu</th>
+<th>Suhu Data Logger (°C)</th>
+<th>Suhu Termometer (°C)</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>10:00</td>
+<td>28.4</td>
+<td>28.5</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>11:00</td>
+<td>28.6</td>
+<td>28.7</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>12:00</td>
+<td>29.0</td>
+<td>29.1</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>13:00</td>
+<td>29.2</td>
+<td>29.3</td>
+</tr>
+
+</table>
+
+
+<h3>Tabel 2. Hasil Pengukuran Kecepatan Arus Laut</h3>
+
+<table>
+
+<tr>
+<th>No</th>
+<th>Waktu</th>
+<th>Data Logger (m/s)</th>
+<th>Current Meter (m/s)</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>10:00</td>
+<td>0.32</td>
+<td>0.33</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>11:00</td>
+<td>0.35</td>
+<td>0.34</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>12:00</td>
+<td>0.37</td>
+<td>0.36</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>13:00</td>
+<td>0.39</td>
+<td>0.38</td>
+</tr>
+
+</table>
+
+<p>
+Berdasarkan hasil pengujian tersebut, dapat diketahui bahwa data logger memiliki tingkat akurasi yang cukup baik dengan selisih pengukuran yang relatif kecil dibandingkan dengan alat ukur standar. Hal ini menunjukkan bahwa alat yang dikembangkan dapat digunakan untuk kegiatan praktikum oseanografi.
+</p>
+
+
+<h2>Kesimpulan</h2>
+
+<p>
+Berdasarkan hasil penelitian yang telah dilakukan, dapat disimpulkan bahwa alat data logger suhu dan kecepatan arus laut berhasil dirancang dan dikembangkan dengan baik. Alat ini mampu merekam data suhu dan arus laut secara otomatis serta menyimpan data hasil pengukuran secara digital.
+</p>
+
+<p>
+Pengujian alat menunjukkan bahwa data logger memiliki tingkat akurasi yang cukup baik sehingga dapat digunakan sebagai alat praktikum oseanografi. Dengan adanya alat ini, proses pengukuran parameter oseanografi dapat dilakukan dengan lebih efisien dan akurat.
+</p>
+
+
+<h2>Referensi</h2>
+
+<p>
+Suwardi, S., Lidiawati, L., & Ayatullah, E. (2022). Rancang Bangun Data Logger Suhu dan Kecepatan Arus Laut untuk Praktikum Oseanografi. International Journal of Ocean and Coastal Engineering.
+</p>
+
+<p>
+Link jurnal:<br>
+<a href="https://ejournal2.undip.ac.id/index.php/ijoce/article/view/16541" target="_blank">
+https://ejournal2.undip.ac.id/index.php/ijoce/article/view/16541
+</a>
+</p>
+
+</div>
+
+</body>
+</html>
